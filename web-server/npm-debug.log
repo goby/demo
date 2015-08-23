@@ -1,0 +1,274 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'component' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'component', null ]
+6 verbose cache add name=undefined spec="component" args=["component",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'component',
+7 verbose parsed url   path: 'component',
+7 verbose parsed url   href: 'component' }
+8 silly lockFile 335c4c1e-component component
+9 verbose lock component /home/goby/.npm/335c4c1e-component.lock
+10 silly lockFile 335c4c1e-component component
+11 silly lockFile 335c4c1e-component component
+12 verbose addNamed [ 'component', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile fa4251c1-component component@
+15 verbose lock component@ /home/goby/.npm/fa4251c1-component.lock
+16 silly addNameRange { name: 'component', range: '*', hasData: false }
+17 verbose request where is /component
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 65eebdd53a84298a
+20 verbose url raw /component
+21 verbose url resolving [ 'https://registry.npmjs.org/', './component' ]
+22 verbose url resolved https://registry.npmjs.org/component
+23 verbose request where is https://registry.npmjs.org/component
+24 info trying registry request attempt 1 at 16:17:09
+25 http GET https://registry.npmjs.org/component
+26 http 200 https://registry.npmjs.org/component
+27 silly registry.get cb [ 200,
+27 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"EDTEW47I2UXFLF7PTE6BKSO4P"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '138869',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Sun, 23 Aug 2015 08:17:20 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-itm7425-ITM',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1440317839.872124,VS0,VE552',
+27 silly registry.get     vary: 'Accept' } ]
+28 silly addNameRange number 2 { name: 'component', range: '*', hasData: true }
+29 silly addNameRange versions [ 'component',
+29 silly addNameRange   [ '0.0.1',
+29 silly addNameRange     '0.0.2',
+29 silly addNameRange     '0.0.3',
+29 silly addNameRange     '0.0.4',
+29 silly addNameRange     '0.0.5',
+29 silly addNameRange     '0.0.6',
+29 silly addNameRange     '0.0.7',
+29 silly addNameRange     '0.1.0',
+29 silly addNameRange     '0.1.1',
+29 silly addNameRange     '0.2.0',
+29 silly addNameRange     '0.3.0',
+29 silly addNameRange     '0.4.0',
+29 silly addNameRange     '0.4.1',
+29 silly addNameRange     '0.4.2',
+29 silly addNameRange     '0.5.0',
+29 silly addNameRange     '0.6.0',
+29 silly addNameRange     '0.6.2',
+29 silly addNameRange     '0.6.3',
+29 silly addNameRange     '0.6.4',
+29 silly addNameRange     '0.7.0',
+29 silly addNameRange     '0.7.1',
+29 silly addNameRange     '0.8.0',
+29 silly addNameRange     '0.9.0',
+29 silly addNameRange     '0.9.1',
+29 silly addNameRange     '0.10.0',
+29 silly addNameRange     '0.10.1',
+29 silly addNameRange     '0.11.0',
+29 silly addNameRange     '0.11.1',
+29 silly addNameRange     '0.12.0',
+29 silly addNameRange     '0.13.0',
+29 silly addNameRange     '0.13.1',
+29 silly addNameRange     '0.13.2',
+29 silly addNameRange     '0.14.0',
+29 silly addNameRange     '0.15.0',
+29 silly addNameRange     '0.15.1',
+29 silly addNameRange     '0.16.0',
+29 silly addNameRange     '0.16.1',
+29 silly addNameRange     '0.16.2',
+29 silly addNameRange     '0.16.3',
+29 silly addNameRange     '0.16.4',
+29 silly addNameRange     '0.16.5',
+29 silly addNameRange     '0.16.6',
+29 silly addNameRange     '0.16.7',
+29 silly addNameRange     '0.16.8',
+29 silly addNameRange     '0.17.0',
+29 silly addNameRange     '0.17.2',
+29 silly addNameRange     '0.17.3',
+29 silly addNameRange     '0.17.4',
+29 silly addNameRange     '0.17.5',
+29 silly addNameRange     '0.17.6',
+29 silly addNameRange     '0.18.0',
+29 silly addNameRange     '0.19.0',
+29 silly addNameRange     '0.19.1',
+29 silly addNameRange     '0.19.2',
+29 silly addNameRange     '0.19.3',
+29 silly addNameRange     '0.19.4',
+29 silly addNameRange     '0.19.5',
+29 silly addNameRange     '0.19.6',
+29 silly addNameRange     '0.19.7',
+29 silly addNameRange     '0.19.8',
+29 silly addNameRange     '1.0.0-rc1',
+29 silly addNameRange     '1.0.0-rc2',
+29 silly addNameRange     '1.0.0-rc3',
+29 silly addNameRange     '1.0.0-rc4',
+29 silly addNameRange     '1.0.0-rc5',
+29 silly addNameRange     '0.19.9',
+29 silly addNameRange     '1.0.0-rc6',
+29 silly addNameRange     '1.0.0-rc7',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '1.0.2',
+29 silly addNameRange     '1.1.0' ] ]
+30 verbose addNamed [ 'component', '1.1.0' ]
+31 verbose addNamed [ '1.1.0', '1.1.0' ]
+32 silly lockFile d0c2e1a3-component-1-1-0 component@1.1.0
+33 verbose lock component@1.1.0 /home/goby/.npm/d0c2e1a3-component-1-1-0.lock
+34 silly lockFile 070ad333-rg-component-component-1-1-0-tgz https://registry.npmjs.org/component/-/component-1.1.0.tgz
+35 verbose lock https://registry.npmjs.org/component/-/component-1.1.0.tgz /home/goby/.npm/070ad333-rg-component-component-1-1-0-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/component/-/component-1.1.0.tgz',
+36 verbose addRemoteTarball   '36049aa257798b7ee57142961e18e0767918c9aa' ]
+37 info retry fetch attempt 1 at 16:17:10
+38 verbose fetch to= /tmp/npm-13112-GK5R_lWx/registry.npmjs.org/component/-/component-1.1.0.tgz
+39 http GET https://registry.npmjs.org/component/-/component-1.1.0.tgz
+40 http 200 https://registry.npmjs.org/component/-/component-1.1.0.tgz
+41 silly lockFile 070ad333-rg-component-component-1-1-0-tgz https://registry.npmjs.org/component/-/component-1.1.0.tgz
+42 silly lockFile 070ad333-rg-component-component-1-1-0-tgz https://registry.npmjs.org/component/-/component-1.1.0.tgz
+43 silly lockFile d0c2e1a3-component-1-1-0 component@1.1.0
+44 silly lockFile d0c2e1a3-component-1-1-0 component@1.1.0
+45 silly lockFile fa4251c1-component component@
+46 silly lockFile fa4251c1-component component@
+47 silly resolved [ { name: 'component',
+47 silly resolved     version: '1.1.0',
+47 silly resolved     description: 'Component package manager consuming git repositories',
+47 silly resolved     keywords: [ 'component', 'package', 'client', 'browser', 'module' ],
+47 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+47 silly resolved     repository: { type: 'git', url: 'https://github.com/componentjs/component' },
+47 silly resolved     dependencies:
+47 silly resolved      { 'component-build': '^1.2.2',
+47 silly resolved        'component-consoler': '^2.0.0',
+47 silly resolved        'component-flatten': '^1.0.1',
+47 silly resolved        'component-ls': '^2.1.0',
+47 silly resolved        'component-outdated2': '^1.0.4',
+47 silly resolved        'component-pin': '^1.0.4',
+47 silly resolved        'component-resolver': '^1.3.0',
+47 silly resolved        'component-search2': '^1.1.1',
+47 silly resolved        'component-updater': '^1.0.4',
+47 silly resolved        'component-watcher': '^1.0.1',
+47 silly resolved        'component-remotes': '^1.2.0',
+47 silly resolved        commander: '^2.2.0',
+47 silly resolved        semver: '^2.2.1',
+47 silly resolved        mkdirp: '~0.3.5',
+47 silly resolved        rimraf: '^2.2.6',
+47 silly resolved        superagent: '~0.17.0',
+47 silly resolved        'win-fork': '~1.1.1',
+47 silly resolved        debug: '*',
+47 silly resolved        co: '^3.0.0',
+47 silly resolved        'tiny-lr-fork': '0.0.5' },
+47 silly resolved     devDependencies: { mocha: '1', should: '3' },
+47 silly resolved     bin:
+47 silly resolved      { component: 'bin/component',
+47 silly resolved        'component-build': 'bin/component-build',
+47 silly resolved        'component-crawl': 'bin/component-crawl',
+47 silly resolved        'component-duplicates': 'bin/component-duplicates',
+47 silly resolved        'component-help': 'bin/component-help',
+47 silly resolved        'component-install': 'bin/component-install',
+47 silly resolved        'component-link': 'bin/component-link',
+47 silly resolved        'component-ls': 'bin/component-ls',
+47 silly resolved        'component-outdated': 'bin/component-outdated',
+47 silly resolved        'component-pin': 'bin/component-pin',
+47 silly resolved        'component-search': 'bin/component-search',
+47 silly resolved        'component-update': 'bin/component-update',
+47 silly resolved        'component-validate': 'bin/component-validate' },
+47 silly resolved     main: 'lib/component',
+47 silly resolved     engines: { node: '>= 0.10.0' },
+47 silly resolved     scripts: { test: 'make test' },
+47 silly resolved     bugs: { url: 'https://github.com/componentjs/component/issues' },
+47 silly resolved     homepage: 'https://github.com/componentjs/component',
+47 silly resolved     _id: 'component@1.1.0',
+47 silly resolved     _shasum: '36049aa257798b7ee57142961e18e0767918c9aa',
+47 silly resolved     _from: 'component@',
+47 silly resolved     _npmVersion: '2.5.1',
+47 silly resolved     _nodeVersion: '0.12.0',
+47 silly resolved     _npmUser: { name: 'timaschew', email: 'timaschew@gmail.com' },
+47 silly resolved     maintainers:
+47 silly resolved      [ [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object] ],
+47 silly resolved     dist:
+47 silly resolved      { shasum: '36049aa257798b7ee57142961e18e0767918c9aa',
+47 silly resolved        tarball: 'http://registry.npmjs.org/component/-/component-1.1.0.tgz' },
+47 silly resolved     directories: {},
+47 silly resolved     _resolved: 'https://registry.npmjs.org/component/-/component-1.1.0.tgz' } ]
+48 info install component@1.1.0 into /usr/lib
+49 info installOne component@1.1.0
+50 verbose lib/node_modules/component unbuild
+51 verbose tar unpack /home/goby/.npm/component/1.1.0/package.tgz
+52 silly lockFile 6ae6ac21-r-usr-lib-node-modules-component tar:///usr/lib/node_modules/component
+53 verbose lock tar:///usr/lib/node_modules/component /home/goby/.npm/6ae6ac21-r-usr-lib-node-modules-component.lock
+54 silly lockFile 13081cdc--npm-component-1-1-0-package-tgz tar:///home/goby/.npm/component/1.1.0/package.tgz
+55 verbose lock tar:///home/goby/.npm/component/1.1.0/package.tgz /home/goby/.npm/13081cdc--npm-component-1-1-0-package-tgz.lock
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 error Error: EACCES, mkdir '/usr/lib/node_modules/component'
+57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/component']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/lib/node_modules/component',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/lib/node_modules/component',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:107:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Linux 3.2.0-4-amd64
+60 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "component"
+61 error cwd /home/goby/st/demo/web-server
+62 error node -v v0.10.32
+63 error npm -v 1.4.28
+64 error path /usr/lib/node_modules/component
+65 error fstream_path /usr/lib/node_modules/component
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/component'
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:107:15)
+72 verbose exit [ 3, true ]
