@@ -19,7 +19,7 @@
         body {
             font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
         }
-        #main-area a{
+        #map-center a{
             margin: 5px;
         }
         #downtown a {
@@ -59,7 +59,7 @@
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Input your nick name..." id="user-name">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="user-login">Go!</button>
+                    <button class="btn btn-success" type="button" id="user-login">Go!</button>
                   </span>
                 </div><!-- /input-group -->
             </div>
@@ -101,7 +101,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row pull-right">
+                    <div class="col-lg-12 ">
+                       物品携带量： <span id="package">40</span>/<span id="package-total">400</span>
+                    </div>
+                </div>
+                <div id="map-center" class="row">
                     <div id="info" class="col-lg-2 col-lg-offset-1">
                         <a class="btn btn-lg btn-primary">信息</a>
                     </div>
@@ -125,6 +130,26 @@
                     <div id="repo" class="col-lg-2 col-lg-offset-1">
                         <a class="btn btn-lg btn-primary">仓库</a>
                     </div> 
+                </div>
+                <div id="map-other" class="row" style="text-align:center">
+                    <h3>抵达城区北部</h3>
+                    <h3>请选择你接下来的行动</h3>
+                    <div class="col-lg-4">
+                        <a class="btn btn-primary btn-lg">搜救他人</a>
+                        <p>立即参与该地区的幸存者搜救行动</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="btn btn-primary btn-lg">领取物资</a>
+                        <p>排队领取区域内发放的生存物资</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="btn btn-primary btn-lg">收集物资</a>
+                        <p>收集零散生存物资，和其他设备，如照明设备等</p>
+                    </div>
+                    <br />
+                    <div class="col-lg-12">
+                        <a class="col-lg-offset-4 col-lg-4 btn btn-lg btn-primary" data-move="#map-center" >前往其他区域</a>
+                    </div>
                 </div>
             </div>
         </div>

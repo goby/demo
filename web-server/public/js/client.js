@@ -13,6 +13,12 @@ function showMainArea(){
     $('#welcome').hide();
     $('#main-area').show();
     $('#time-panel').show();
+    $('#map-other').hide();
+}
+
+function moveMap(dir) {
+    $('#map-other').show();
+    $('#map-center').hide();
 }
 
 function updateStatus(target, val, limit) {
@@ -34,26 +40,6 @@ function showWelcome(msg, timeout, cb) {
     setTimeout(function(){ 
         $('#loading-message').fadeOut(cb);
     }, timeout);
-}
-
-function queryEntry(uid, callback) {
-    var route = 'gate.gateHandler.queryEntry';
-    pomelo.init({
-        host: window.location.hostname,
-        port: 3010,
-        log: true
-    }, function() {
-        pomelo.request(route, {
-            uid: uid
-        }, function(data) {
-            pomelo.disconnect();
-            if(data.code === 500) {
-                showError(LOGIN_ERROR);
-                return;
-            }
-            callback(data.host, data.port);
-        });
-    });
 }
 
 $(function(){
@@ -78,7 +64,7 @@ $(function(){
 
     $('#main-area a').click(function(){
         var self = $(this);
-        
+        moveMap();        
     });
 
     // -- pomelo event listening --
