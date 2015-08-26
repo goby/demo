@@ -20,6 +20,10 @@ function moveMap(dir) {
     $('#map-other').show();
     $('#map-center').hide();
 }
+function backHome(dir) {
+    $('#map-other').hide();
+    $('#map-center').show();
+}
 
 function updateStatus(target, val, limit) {
     var ctlLimit = $('.' + target + ' .progress-bar:last');
@@ -28,10 +32,18 @@ function updateStatus(target, val, limit) {
     ctlValue.css('width', val+'%');
 }
 
+function toTime(v) {
+    var m = parseInt(v/60);
+    if (m<10) m = '0'+m;
+    var s = v%60;
+    if (s<10) s = '0'+s;
+    return m+':'+s;
+}
+
 function updateTime(current, total) {
     var value = current/total * 100 + '%';
     $('#time-panel .progress-bar').css('width', value);
-    $('#time-panel .tick').text(int(current/60)+':'+int(current%60));
+    $('#time-panel .tick').text(toTime(current));
 }
 
 function showWelcome(msg, timeout, cb) {
@@ -44,7 +56,9 @@ function showWelcome(msg, timeout, cb) {
 
 $(function(){
     showLogin();
-    //showMainArea();
+
+    var lasttime = 900;
+    setInterval(function(){updateTime(lasttime, 900); lasttime -= 1;}, 1000); 
 
     $('#user-login').click(function(){
         var control = $('#user-name')
@@ -62,9 +76,13 @@ $(function(){
         })
     });
 
-    $('#main-area a').click(function(){
+    $('#downtown a').click(function(){
         var self = $(this);
         moveMap();        
+    });
+
+    $('#backHome').click(function(){
+        backHome();
     });
 
     // -- pomelo event listening --

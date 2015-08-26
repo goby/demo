@@ -1,8 +1,0 @@
-[2015-08-23 16:15:02.788] [INFO] pomelo-admin - [32m[/home/goby/st/demo/game-server/node_modules/pomelo/node_modules/pomelo-admin/lib/consoleService.js] [39mtry to connect master: "master", "127.0.0.1", 3005
-[2015-08-23 16:15:03.312] [INFO] pomelo-admin - [32m[/home/goby/st/demo/game-server/node_modules/pomelo/node_modules/pomelo-admin/lib/consoleService.js] [39mtry to connect master: "connector", "127.0.0.1", 3005
-[2015-08-23 16:16:47.947] [INFO] pomelo-admin - [32m[/home/goby/st/demo/game-server/node_modules/pomelo/node_modules/pomelo-admin/lib/consoleService.js] [39mtry to connect master: "master", "127.0.0.1", 3005
-[2015-08-23 16:16:48.451] [INFO] pomelo-admin - [32m[/home/goby/st/demo/game-server/node_modules/pomelo/node_modules/pomelo-admin/lib/consoleService.js] [39mtry to connect master: "connector", "127.0.0.1", 3005
-[2015-08-23 16:25:24.040] [INFO] pomelo-admin - [32m[/home/goby/st/demo/game-server/node_modules/pomelo/node_modules/pomelo-admin/lib/consoleService.js] [39mtry to connect master: "master", "127.0.0.1", 3005
-[2015-08-23 16:25:24.565] [INFO] pomelo-admin - [32m[/home/goby/st/demo/game-server/node_modules/pomelo/node_modules/pomelo-admin/lib/consoleService.js] [39mtry to connect master: "connector", "127.0.0.1", 3005
-[2015-08-23 21:13:07.555] [INFO] pomelo-admin - [32m[/home/goby/st/demo/game-server/node_modules/pomelo/node_modules/pomelo-admin/lib/consoleService.js] [39mtry to connect master: "master", "127.0.0.1", 3005
-[2015-08-23 21:13:08.068] [INFO] pomelo-admin - [32m[/home/goby/st/demo/game-server/node_modules/pomelo/node_modules/pomelo-admin/lib/consoleService.js] [39mtry to connect master: "connector", "127.0.0.1", 3005

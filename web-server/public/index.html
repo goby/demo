@@ -65,9 +65,9 @@
             </div>
             <div id="loading-message" style="text-align: center;font-size: 35pt;height:100%; line-height:100%">
             </div>
-            <div id="main-area" class="col-lg-12 ">
+            <div id="main-area" class="col-xs-12 ">
                 <div class="row" style="text-align: center">
-                    <div class="col-lg-4">
+                    <div class="col-xs-4">
                         <div class="health">
                             <span>健康度</span>
                             <div class="progress" style="background-color: #FFF1F1">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xs-4">
                         <div class="food">
                             <span>食物</span>
                             <div class="progress" style="background-color: #FFE2BA" >
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xs-4">
                         <div class="water">
                             <span>水</span>
                             <div class="progress" style="background-color: #D1E9FD">
@@ -102,53 +102,53 @@
                     </div>
                 </div>
                 <div class="row pull-right">
-                    <div class="col-lg-12 ">
+                    <div class="col-xs-12 ">
                        物品携带量： <span id="package">40</span>/<span id="package-total">400</span>
                     </div>
                 </div>
                 <div id="map-center" class="row">
-                    <div id="info" class="col-lg-2 col-lg-offset-1">
+                    <div id="info" class="col-xs-2 col-xs-offset-1">
                         <a class="btn btn-lg btn-primary">信息</a>
                     </div>
-                    <div id="downtown" class="col-lg-offset-1 col-lg-5">
+                    <div id="downtown" class="col-xs-offset-1 col-xs-5">
                         <div class="row">
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="wn">西北</a>
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="n" >北</a>
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="en">东北</a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="wn">西北</a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="n" >北</a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="en">东北</a>
                         </div> 
                         <div class="row">
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="w">西</a>
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="c">市中心<i class="glyphicon glyphicon-map-marker"></i></a>
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="e">东</a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="w">西</a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="c">市中心<i class="glyphicon glyphicon-map-marker"></i></a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="e">东</a>
                         </div> 
                         <div class="row">
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="ws">西南</a>
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="s" >南</a>
-                            <a class="btn btn-lg btn-primary col-lg-3" data-dir="es">东南</a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="ws">西南</a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="s" >南</a>
+                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="es">东南</a>
                         </div> 
                     </div>
-                    <div id="repo" class="col-lg-2 col-lg-offset-1">
+                    <div id="repo" class="col-xs-2 col-xs-offset-1">
                         <a class="btn btn-lg btn-primary">仓库</a>
                     </div> 
                 </div>
                 <div id="map-other" class="row" style="text-align:center">
                     <h3>抵达城区北部</h3>
                     <h3>请选择你接下来的行动</h3>
-                    <div class="col-lg-4">
+                    <div class="col-xs-4">
                         <a class="btn btn-primary btn-lg">搜救他人</a>
                         <p>立即参与该地区的幸存者搜救行动</p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xs-4">
                         <a class="btn btn-primary btn-lg">领取物资</a>
                         <p>排队领取区域内发放的生存物资</p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xs-4">
                         <a class="btn btn-primary btn-lg">收集物资</a>
                         <p>收集零散生存物资，和其他设备，如照明设备等</p>
                     </div>
                     <br />
-                    <div class="col-lg-12">
-                        <a class="col-lg-offset-4 col-lg-4 btn btn-lg btn-primary" data-move="#map-center" >前往其他区域</a>
+                    <div class="col-xs-12">
+                        <a class="col-xs-offset-4 col-xs-4 btn btn-lg btn-primary" id="backHome" data-move="#map-center" >前往其他区域</a>
                     </div>
                 </div>
             </div>
