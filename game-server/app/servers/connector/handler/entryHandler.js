@@ -49,3 +49,14 @@ Handler.prototype.subscribe = function(msg, session, next) {
 	};
   next(null, result);
 };
+
+/**
+ * Get Online User List
+ */
+Handler.prototype.getUserList = function(msg, session, next) {
+    var sessionService = self.app.get('sessionService')
+    next(null, {
+        users: users,
+        logined: current
+    });
+}

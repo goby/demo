@@ -1,6 +1,14 @@
 var pomelo = window.pomelo;
 var username;
 
+pomelo.init({
+    host: window.location.hostname,
+    port: 3010,
+    log: true
+}, function(data){
+    console.log(data)
+});
+
 function showLogin(){
     $('#loading-message').hide();
     $('#welcome').show();
