@@ -6,7 +6,9 @@ pomelo.init({
     port: 3010,
     log: true
 }, function(data){
-    console.log(data)
+    pomelo.request("connector.resourceHandler.loadResource", function(data) {
+        console.log(data);
+    });
 });
 
 function showLogin(){
