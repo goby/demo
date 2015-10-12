@@ -15,7 +15,18 @@ var Handler = function(app) {
  * @return {Void}
  */
 Handler.prototype.entry = function(msg, session, next) {
-  next(null, {code: 200, msg: 'game server is ok.'});
+  var gameId = msg.gameId;
+  this.app.rpc.connector.playerRemote.getUnusedId(session, gameId, function(id) {
+    var result = {code: 200, msg: 'OK'}
+    if (id == null) {
+       result.code = 400;
+       result.msg = '人数已达到设置上限，无法进入';
+    }
+    else {
+       result.data = id; 
+    }
+    next(null, result);
+  });
 };
 
 /**

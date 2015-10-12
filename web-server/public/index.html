@@ -11,6 +11,7 @@
     <meta name="version" content="1.0" />
     <meta name="keywords" content="pomelo" />
     <link type="text/css" rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
     <script src="//cdn.bootcss.com/jquery/2.0.0/jquery.js" type="text/javascript"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.js" type="text/javascript"></script>
     <script src="js/lib/build/build.js" type="text/javascript"></script>
@@ -26,13 +27,21 @@
             height: 100px;
             line-height: 80px;
         }
+        .area-map {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .event-list {
+            margin-top: 50px;
+        }
     </style>
   </head>
-  <body>
+  <body style="overflow-x:hidden">
     <header class="navbar navbar-static-top navbar-default" id="top" role="banner">
         <div class="container">
             <div class="navbar-header">
-                <a href="../" class="navbar-brand">应急演练</a>
+                <a href="../" class="navbar-brand"></a>
             </div>
             <nav class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -51,109 +60,85 @@
         </div>
         <p class="pull-right">剩余时间：<span class="tick">15:01</span></p>
     </div>
+    <div class='container' id="player-status">
+        <div class="col-xs-12">
+            <div class="row" style="text-align: center">
+                <div class="col-xs-4">
+                    <div class="health">
+                        <span>健康度</span>
+                        <div class="progress status" style="background-color: #FFF1F1">
+                           <div class="progress-bar progress-bar-danger active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <span class="sr">40%</span>
+                           </div>
+                           <div class="progress-bar progress-bar-danger pull-right" role="progressbar" style="width: 0%; background-color:#000"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="food">
+                        <span>食物</span>
+                        <div class="progress status" style="background-color: #FFE2BA" >
+                           <div class="progress-bar progress-bar-warning active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <span class="sr">40%</span>
+                           </div>
+                           <div class="progress-bar progress-bar-danger pull-right" role="progressbar" style="width: 0%; background-color:#000"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="water">
+                        <span>水</span>
+                        <div class="progress status" style="background-color: #D1E9FD">
+                           <div class="progress-bar progress-bar-primary active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <span class="sr">40%</span>
+                           </div>
+                           <div class="progress-bar progress-bar-danger pull-right" role="progressbar" style="width: 0%; background-color:#000"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pull-right">
+                <div class="col-xs-12 ">
+                   物品携带量： <span id="package">40</span>/<span id="package-total">400</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <main role="main">
         <div class="container">
-            <div class="jumbotron" id="welcome">
-                <h1>Hello, world!</h1>
-                <p>...</p>
+            <div role="scene" id="welcome" class="jumbotron" >
+                <h1 id="game-name"></h1>
+                <p id="game-description"></p>
                 <div class="input-group">
+                  <span class="input-group-addon" id='user-id'>  </span>
                   <input type="text" class="form-control" placeholder="Input your nick name..." id="user-name">
                   <span class="input-group-btn">
                     <button class="btn btn-success" type="button" id="user-login">Go!</button>
                   </span>
                 </div><!-- /input-group -->
             </div>
-            <div id="loading-message" style="text-align: center;font-size: 35pt;height:100%; line-height:100%">
+            <div role="scene" id="loading-message" style="text-align: center;font-size: 35pt;height:100%; line-height:100%">
+                <div id="message"></div>
             </div>
-            <div id="main-area" class="col-xs-12 ">
-                <div class="row" style="text-align: center">
-                    <div class="col-xs-4">
-                        <div class="health">
-                            <span>健康度</span>
-                            <div class="progress" style="background-color: #FFF1F1">
-                               <div class="progress-bar progress-bar-danger active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span class="sr">40%</span>
-                               </div>
-                               <div class="progress-bar progress-bar-danger pull-right" role="progressbar" style="width: 0%; background-color:#000"> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="food">
-                            <span>食物</span>
-                            <div class="progress" style="background-color: #FFE2BA" >
-                               <div class="progress-bar progress-bar-warning active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span class="sr">40%</span>
-                               </div>
-                               <div class="progress-bar progress-bar-danger pull-right" role="progressbar" style="width: 0%; background-color:#000"> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="water">
-                            <span>水</span>
-                            <div class="progress" style="background-color: #D1E9FD">
-                               <div class="progress-bar progress-bar-primary active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span class="sr">40%</span>
-                               </div>
-                               <div class="progress-bar progress-bar-danger pull-right" role="progressbar" style="width: 0%; background-color:#000"> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pull-right">
-                    <div class="col-xs-12 ">
-                       物品携带量： <span id="package">40</span>/<span id="package-total">400</span>
-                    </div>
-                </div>
+            <div role="scene" id="main-area" class="col-xs-12 ">
                 <div id="map-center" class="row">
-                    <div id="info" class="col-xs-2 col-xs-offset-1">
-                        <a class="btn btn-lg btn-primary">信息</a>
-                    </div>
-                    <div id="downtown" class="col-xs-offset-1 col-xs-5">
-                        <div class="row">
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="wn">西北</a>
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="n" >北</a>
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="en">东北</a>
-                        </div> 
-                        <div class="row">
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="w">西</a>
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="c">市中心<i class="glyphicon glyphicon-map-marker"></i></a>
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="e">东</a>
-                        </div> 
-                        <div class="row">
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="ws">西南</a>
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="s" >南</a>
-                            <a class="btn btn-lg btn-primary col-xs-3" data-dir="es">东南</a>
-                        </div> 
-                    </div>
-                    <div id="repo" class="col-xs-2 col-xs-offset-1">
-                        <a class="btn btn-lg btn-primary">仓库</a>
-                    </div> 
+                    <svg id="map" xmlns='http://www.w3.org/2000/svg'></svg>
                 </div>
-                <div id="map-other" class="row" style="text-align:center">
-                    <h3>抵达城区北部</h3>
-                    <h3>请选择你接下来的行动</h3>
-                    <div class="col-xs-4">
-                        <a class="btn btn-primary btn-lg">搜救他人</a>
-                        <p>立即参与该地区的幸存者搜救行动</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <a class="btn btn-primary btn-lg">领取物资</a>
-                        <p>排队领取区域内发放的生存物资</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <a class="btn btn-primary btn-lg">收集物资</a>
-                        <p>收集零散生存物资，和其他设备，如照明设备等</p>
-                    </div>
-                    <br />
-                    <div class="col-xs-12">
-                        <a class="col-xs-offset-4 col-xs-4 btn btn-lg btn-primary" id="backHome" data-move="#map-center" >前往其他区域</a>
+            </div>
+            <div role="scene" id="spec-area">
+                <div class="row">
+                    <div class="area-map">
+                        <h3 class="area-title"></h3>
+                        <p class="area-description"></p>
+                        <h3 style="text-align: center">请选择你接下来的行动</h3>
+                        <div class="event-list"></div>
+                        <div class="col-xs-12" style="bottom: 20px; position: absolute">
+                            <a class="col-xs-offset-4 col-xs-4 btn btn-lg btn-primary" id="backHome" data-move="#map-center" >前往其他区域</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
   </body>
 </html>

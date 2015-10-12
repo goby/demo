@@ -1,7 +1,10 @@
-// require json files
+// 
+var app  = require('pomelo').app;
 var xlsx = require('node-xlsx');
 
 var area = require('../../config/data/area');
+
+var xlsxData = xlsx.parse(app.getBase() + '/config/data.xlsx');
 
 /**
  * Data model `new Data()`
@@ -36,7 +39,13 @@ var Data = function(data) {
 var mapData = function(fields, item) {
   var obj = {};
   for (var k in fields) {
-    obj[k] = item[fields[k]];
+     var keys = k.split('.');
+     var tmp = obj;
+     keys.forEach(function(i, e) {
+       if (e == keys.length - 1) tmp[i] = item[fields[k]];
+       else if (!tmp[i]) tmp[i] = {};
+       tmp = tmp[i];
+     });
   }
   return obj;
 };
@@ -88,6 +97,21 @@ Data.prototype.findSmaller = function(attr, value) {
 };
 
 /**
+ * Find the largest id
+ * @return {Obj}
+ */
+Data.prototype.findLast = function() {
+  var last = 0;
+  var i;
+  for (i in this.data) {
+    if (Number(i) > last) {
+      last = Number(i);
+    }
+  }
+  return this.data[last];
+};
+
+/**
  * find item by id
  *
  * @param id
@@ -109,5 +133,9 @@ Data.prototype.all = function() {
 };
 
 module.exports = {
-  area: new Data(area)
+  game: new Data(xlsxData[0].data),  
+  area: new Data(xlsxData[1].data),  
+  role: new Data(xlsxData[2].data), 
+  event: new Data(xlsxData[3].data),
+  task: new Data(xlsxData[4].data),
 };
